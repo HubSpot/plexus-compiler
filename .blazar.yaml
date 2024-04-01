@@ -1,0 +1,12 @@
+buildpack:
+  name: Blazar-Buildpack-Java
+
+env:
+  SKIP_VERSION_OVERRIDE_ON_BRANCH: hubspot
+  MAVEN_ARGS: -DskipTests -Drat.skip=true -Dspotless.check.skip=true
+
+
+stepActivation:
+  notify:
+    branches: [hubspot]
+
