@@ -26,8 +26,11 @@ package org.codehaus.plexus.compiler.javac;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.codehaus.plexus.compiler.CompilerMessage;
@@ -37,8 +40,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.hamcrest.CoreMatchers.endsWith;
-import static org.hamcrest.CoreMatchers.startsWith;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
@@ -119,6 +121,84 @@ public class ErrorMessageParserTest {
         assertThat(compilerError.getStartLine(), is(7));
 
         assertThat(compilerError.getEndLine(), is(7));
+    }
+
+    @Test
+    public void testJavaxMessagerPrintErrorMessage() throws Exception {
+        String error = new String(Files.readAllBytes(Paths.get(getClass()
+                .getClassLoader()
+                .getResource("messages/javax-messager-printerr.txt")
+                .toURI())));
+
+        List<CompilerMessage> messages =
+                JavacCompiler.parseModernStream(1, new BufferedReader(new StringReader(error)));
+
+        assertThat(messages.size(), is(1));
+        assertThat(messages.get(0).getKind(), is(CompilerMessage.Kind.ERROR));
+        assertThat(
+                messages.get(0).getMessage(),
+                containsString("error: Caught exception in processor com.mycompany.gen.MyMessageGenerator:"));
+        assertThat(messages.get(0).getMessage(), containsString("java.lang.RuntimeException: Failed to parse"));
+        assertThat(
+                messages.get(0).getMessage(),
+                containsString("Caused by: org.apache.avro.AvroRuntimeException: Nested union"));
+    }
+
+    @Test
+    public void testChirpError() throws Exception {
+        String error = new String(Files.readAllBytes(Paths.get(getClass()
+                .getClassLoader()
+                .getResource("messages/chirp-error.txt")
+                .toURI())));
+
+        List<CompilerMessage> messages =
+                JavacCompiler.parseModernStream(1, new BufferedReader(new StringReader(error)));
+
+        List<CompilerMessage> errors =
+                messages.stream().filter(CompilerMessage::isError).collect(Collectors.toList());
+        assertThat(errors.size(), is(1));
+        assertThat(
+                errors.get(0).getMessage(),
+                containsString(
+                        "error: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF."));
+        assertThat(errors.get(0).getMessage(), containsString("The following fields had problems:"));
+        assertThat(
+                errors.get(0).getMessage(),
+                containsString(
+                        "- epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not"));
+
+        assertThat(
+                messages.stream()
+                        .filter(m -> m.getKind() == CompilerMessage.Kind.NOTE)
+                        .count(),
+                is(55L));
+    }
+
+    @Test
+    public void testUnhandledErrorProneException() throws Exception {
+        String error = new String(Files.readAllBytes(Paths.get(getClass()
+                .getClassLoader()
+                .getResource("messages/unhandled-ep-exception.txt")
+                .toURI())));
+
+        List<CompilerMessage> messages =
+                JavacCompiler.parseModernStream(1, new BufferedReader(new StringReader(error)));
+
+        assertThat(messages.size(), is(2));
+        assertThat(messages.get(0).getKind(), is(CompilerMessage.Kind.ERROR));
+        assertThat(
+                messages.get(0).getMessage(),
+                containsString("error: An unhandled exception was thrown by the Error Prone static analysis plugin."));
+        assertThat(messages.get(1).getKind(), is(CompilerMessage.Kind.ERROR));
+        assertThat(
+                messages.get(1).getMessage(),
+                containsString("java.lang.NoSuchMethodError: 'com.google.errorprone.matchers.Description$Builder"));
+        assertThat(
+                messages.get(1).getMessage(),
+                containsString("at com.mycompany.error.prone.RecipeFinderCheck.matchClass(RecipeFinderCheck.java:50)"));
+        assertThat(
+                messages.get(1).getMessage(),
+                containsString("at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)"));
     }
 
     @Test

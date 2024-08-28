@@ -609,14 +609,14 @@ public class JavacCompiler extends AbstractCompiler {
     }
 
     // Match ~95% of existing JDK exception name patterns (last checked for JDK 21)
-    private static final Pattern STACK_TRACE_FIRST_LINE = Pattern.compile("^(?:[\\w+.-]+\\.)[\\w$]*?(?:"
+    private static final Pattern STACK_TRACE_FIRST_LINE = Pattern.compile("^\\s*(?:[\\w+.-]+\\.)[\\w$]*?(?:"
             + "Exception|Error|Throwable|Failure|Result|Abort|Fault|ThreadDeath|Overflow|Warning|"
             + "NotSupported|NotFound|BadArgs|BadClassFile|Illegal|Invalid|Unexpected|Unchecked|Unmatched\\w+"
             + ").*$");
 
     // Match exception causes, existing and omitted stack trace elements
     private static final Pattern STACK_TRACE_OTHER_LINE =
-            Pattern.compile("^(?:Caused by:\\s.*|\\s*at .*|\\s*\\.\\.\\.\\s\\d+\\smore)$");
+            Pattern.compile("^\\s*(?:Caused by:\\s.*|\\s*at .*|\\s*\\.\\.\\.\\s\\d+\\smore)$");
 
     // Match generic javac errors with 'javac:' prefix, JMV init and boot layer init errors
     private static final Pattern JAVAC_OR_JVM_ERROR =
@@ -640,10 +640,12 @@ public class JavacCompiler extends AbstractCompiler {
         boolean hasPointer = false;
         int stackTraceLineCount = 0;
 
+        CompilerMessage.Kind workingKind = null;
+
         while (true) {
             line = input.readLine();
 
-            if (line == null) {
+            if (line == null || line.isEmpty()) {
                 // javac output not detected by other parsing
                 // maybe better to ignore only the summary and mark the rest as error
                 String bufferAsString = buffer.toString();
@@ -653,6 +655,10 @@ public class JavacCompiler extends AbstractCompiler {
                     } else if (hasPointer) {
                         // A compiler message remains in buffer at end of parse stream
                         errors.add(parseModernError(exitCode, bufferAsString));
+                    } else if (workingKind != null) {
+                        errors.add(new CompilerMessage(buffer.toString().trim(), workingKind));
+                        buffer = new StringBuilder();
+                        workingKind = null;
                     } else if (stackTraceLineCount > 0) {
                         // Extract stack trace from end of buffer
                         String[] lines = bufferAsString.split("\\R");
@@ -683,7 +689,9 @@ public class JavacCompiler extends AbstractCompiler {
                         errors.add(new CompilerMessage(buffer.toString(), CompilerMessage.Kind.ERROR));
                     }
                 }
-                return errors;
+                if (line == null) {
+                    return errors;
+                }
             }
 
             if (stackTraceLineCount == 0 && STACK_TRACE_FIRST_LINE.matcher(line).matches()
@@ -702,15 +710,25 @@ public class JavacCompiler extends AbstractCompiler {
                 buffer = new StringBuilder(); // this is quicker than clearing it
 
                 hasPointer = false;
+            } else if (!line.startsWith(" ") && workingKind != null) {
+                errors.add(new CompilerMessage(buffer.toString().trim(), workingKind));
+                buffer = new StringBuilder();
+                workingKind = null;
             }
 
             // TODO: there should be a better way to parse these
-            if ((buffer.length() == 0) && line.startsWith("error: ")) {
-                errors.add(new CompilerMessage(line, CompilerMessage.Kind.ERROR));
-            } else if ((buffer.length() == 0) && line.startsWith("warning: ")) {
-                errors.add(new CompilerMessage(line, CompilerMessage.Kind.WARNING));
-            } else if ((buffer.length() == 0) && isNote(line)) {
-                // skip, JDK 1.5 telling us deprecated APIs are used but -Xlint:deprecation isn't set
+            if (line.startsWith("error: ")) {
+                workingKind = CompilerMessage.Kind.ERROR;
+                buffer = new StringBuilder().append(line).append(EOL);
+                continue;
+            } else if (line.startsWith("warning: ")) {
+                workingKind = CompilerMessage.Kind.WARNING;
+                buffer = new StringBuilder().append(line).append(EOL);
+                continue;
+            } else if (isNote(line)) {
+                workingKind = CompilerMessage.Kind.NOTE;
+                buffer = new StringBuilder().append(line).append(EOL);
+                continue;
             } else if ((buffer.length() == 0) && isMisc(line)) {
                 // verbose output was set
                 errors.add(new CompilerMessage(line, CompilerMessage.Kind.OTHER));
