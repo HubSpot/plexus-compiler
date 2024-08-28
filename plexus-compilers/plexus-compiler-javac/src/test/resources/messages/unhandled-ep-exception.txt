@@ -1,0 +1,34 @@
+error: An unhandled exception was thrown by the Error Prone static analysis plugin.
+     Please report this at https://github.com/google/error-prone/issues/new and include the following:
+
+     error-prone version: 2.19.1-SNAPSHOT
+     BugPattern: (see stack trace)
+     Stack Trace:
+     java.lang.NoSuchMethodError: 'com.google.errorprone.matchers.Description$Builder com.google.errorprone.matchers.Description.builder(com.sun.source.tree.Tree, java.lang.String, java.lang.String, com.google.errorprone.BugPattern$SeverityLevel, java.lang.String)'
+  	at com.mycompany.error.prone.RecipeFinderCheck.matchClass(RecipeFinderCheck.java:50)
+  	at com.google.errorprone.scanner.ErrorProneScanner.processMatchers(ErrorProneScanner.java:451)
+  	at com.google.errorprone.scanner.ErrorProneScanner.visitClass(ErrorProneScanner.java:549)
+  	at com.google.errorprone.scanner.ErrorProneScanner.visitClass(ErrorProneScanner.java:152)
+  	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+  	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+  	at com.google.errorprone.scanner.Scanner.scan(Scanner.java:75)
+  	at com.google.errorprone.scanner.Scanner.scan(Scanner.java:49)
+  	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+  	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:113)
+  	at jdk.compiler/com.sun.source.util.TreeScanner.visitCompilationUnit(TreeScanner.java:144)
+  	at com.google.errorprone.scanner.ErrorProneScanner.visitCompilationUnit(ErrorProneScanner.java:562)
+  	at com.google.errorprone.scanner.ErrorProneScanner.visitCompilationUnit(ErrorProneScanner.java:152)
+  	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+  	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:56)
+  	at com.google.errorprone.scanner.Scanner.scan(Scanner.java:59)
+  	at com.google.errorprone.scanner.ErrorProneScannerTransformer.apply(ErrorProneScannerTransformer.java:43)
+  	at com.google.errorprone.ErrorProneAnalyzer.finished(ErrorProneAnalyzer.java:161)
+  	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+  	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+  	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1361)
+  	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:960)
+  	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+  	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+  	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+  	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+

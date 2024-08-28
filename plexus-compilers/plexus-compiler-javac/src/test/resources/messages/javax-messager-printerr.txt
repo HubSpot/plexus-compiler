@@ -1,0 +1,26 @@
+error: Caught exception in processor com.mycompany.gen.MyMessageGenerator:
+  java.lang.RuntimeException: Failed to parse {"name":"SlackAnnouncementPointer","namespace":"com.mycompany.core.announcements","doc":"Generated avro schema for source immutable com.mycompany.core.announcements.SlackAnnouncementPointerIF","fields":[{"name":"id","type":"long"},{"name":"announcementType","type":"string"},{"name":"refreshable","type":["null","boolean"],"default":null},{"name":"metadata","type":["null",[{"name":"SlackAnnouncementEmptyMetadata","namespace":"...,{"name":"updatedAtEpochMillis","type":"long"}],"type":"record"}
+  	at com.mycompany.core.avro.schema.Schemas.toAvro(Schemas.java:319)
+  	at com.mycompany.gen.MessageGenerator.generateMany(MessageGenerator.java:102)
+  	at com.mycompany.processor.generator.TypeGenerator.process(TypeGenerator.java:36)
+  	at com.mycompany.processor.TurbineGenerator.process(TurbineGenerator.java:28)
+  	at com.mycompany.processor.TurbineProcessorBase.process(TurbineProcessorBase.java:127)
+  	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:1023)
+  	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:939)
+  	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment$Round.run(JavacProcessingEnvironment.java:1267)
+  	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:1382)
+  	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:1234)
+  	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:916)
+  	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+  	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+  	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+  	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+  Caused by: org.apache.avro.AvroRuntimeException: Nested union: ["null",[{"type":"record","name":"SlackAnnouncementEmptyMetadata","namespace":"com.mycompany.core.slack","doc":"Generated avro schema for source immutable com.mycompany.core.slack.SlackAnnouncementEmptyMetadataIF","fields":[]},{"type":"record","name":"SlackChannelRoleNotificationMetadata",...","fields":[{"name":"thirdPartyIncidentId","type":"long"}]}]]
+  	at org.apache.avro.Schema$UnionSchema.<init>(Schema.java:1229)
+  	at org.apache.avro.Schema.parse(Schema.java:1806)
+  	at org.apache.avro.Schema.parse(Schema.java:1718)
+  	at org.apache.avro.Schema$Parser.parse(Schema.java:1469)
+  	at org.apache.avro.Schema$Parser.parse(Schema.java:1457)
+  	at com.mycompany.core.avro.schema.Schemas.toAvro(Schemas.java:317)
+  	... 14 more
+

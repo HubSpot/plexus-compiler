@@ -1,0 +1,631 @@
+LOGBACK: using context selector class ch.qos.logback.classic.selector.LoggerContextSelector
+09:24:15.255 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Turbine initialization done; Beginning new compilation.
+09:24:15.258 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - ############### Processing round 0 ###############
+09:24:15.352 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutResponseIF
+09:24:15.574 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutResponseIF
+09:24:15.661 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutResponseIF
+09:24:15.663 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutResponseIF
+09:24:15.675 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeResponseIF
+09:24:15.684 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeResponseIF
+09:24:15.702 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksRequestIF
+09:24:15.705 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksRequestIF
+09:24:15.719 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutRequestIF
+09:24:15.721 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutRequestIF
+09:24:15.732 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutRequestIF
+09:24:15.734 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutRequestIF
+09:24:15.745 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksResponseIF
+09:24:15.776 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksResponseIF
+09:24:15.801 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneJiraResponseIF
+09:24:15.804 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneJiraResponseIF
+09:24:15.820 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GafferChirpErrorIF
+09:24:15.829 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GafferChirpErrorIF
+09:24:15.847 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeRequestIF
+09:24:15.849 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeRequestIF
+09:24:15.858 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.VoidResponseIF
+09:24:15.862 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.VoidResponseIF
+09:24:15.869 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+09:24:15.877 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:15.877 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutRequestIF
+09:24:15.880 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutRequestIF
+09:24:15.890 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutResponseIF
+09:24:15.898 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutResponseIF
+09:24:15.915 [main] WARN com.hubspot.turbine.processor.utils.DefferedElements - Deferring com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF due to: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.034 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferUpgradeService
+09:24:16.056 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.071 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferBrokenCheckService
+09:24:16.073 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.080 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferJiraService
+09:24:16.082 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.088 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferRolloutService
+09:24:16.092 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.102 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - 7 elements were deferred.
+09:24:16.102 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Round took 845721uS
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksRequestIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksRequestIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutRequestIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CancelRolloutRequestIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutRequestIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GetRolloutRequestIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.broken.BrokenChecksResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneJiraResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneJiraResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GafferChirpErrorIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.GafferChirpErrorIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeRequestIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateUpgradeRequestIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.VoidResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.VoidResponseIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+Note: [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutRequestIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutRequestIF
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutResponseIF
+Note: [CHIRP-GRAPHQL] Attempting codegen for message: com.hubspot.gaffer.rpc.models.CreateRolloutResponseIF
+Note: Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferUpgradeService
+Note: CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+Note: Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferBrokenCheckService
+Note: CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+Note: Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferJiraService
+Note: CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+Note: Generating CHIRP clients for com.hubspot.gaffer.rpc.GafferRolloutService
+Note: CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.534 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - ############### Processing round 1 ###############
+09:24:16.535 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+09:24:16.537 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.537 [main] WARN com.hubspot.turbine.processor.utils.DefferedElements - Deferring com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF due to: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.541 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [TURBINE] saw 13 new elements annotated with @ChirpAutoService
+09:24:16.621 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - 7 elements were deferred.
+09:24:16.621 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Round took 87158uS
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+Note: [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+Note: [TURBINE] saw 13 new elements annotated with @ChirpAutoService
+09:24:16.671 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - ############### Processing round 2 ###############
+09:24:16.672 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+09:24:16.673 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.673 [main] WARN com.hubspot.turbine.processor.utils.DefferedElements - Deferring com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF due to: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.680 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferBrokenCheckService
+09:24:16.692 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferRolloutService
+09:24:16.699 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferUpgradeService
+09:24:16.712 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferJiraService
+09:24:16.721 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - 7 elements were deferred.
+09:24:16.721 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Round took 49631uS
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+Note: [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+Note: [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferBrokenCheckService
+Note: [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferRolloutService
+Note: [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferUpgradeService
+Note: [CHIRP-GRAPHQL] Attempting codegen for: com.hubspot.gaffer.rpc.GafferJiraService
+09:24:16.760 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - ############### Processing round 3 ###############
+09:24:16.760 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+09:24:16.761 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.761 [main] WARN com.hubspot.turbine.processor.utils.DefferedElements - Deferring com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF due to: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.761 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [TURBINE] saw 12 new elements annotated with @ChirpAutoService
+09:24:16.762 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - 7 elements were deferred.
+09:24:16.762 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Round took 2003uS
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+Note: [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+Note: [TURBINE] saw 12 new elements annotated with @ChirpAutoService
+09:24:16.798 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - ############### Processing round 4 ###############
+09:24:16.798 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+09:24:16.799 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.799 [main] WARN com.hubspot.turbine.processor.utils.DefferedElements - Deferring com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF due to: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.800 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - 7 elements were deferred.
+09:24:16.800 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Processing is over
+09:24:16.800 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpClientModulesGenerator had 0 elements deferred at end of processing
+09:24:16.800 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpMessageGenerator had 1 elements deferred at end of processing
+09:24:16.800 [main] ERROR com.hubspot.turbine.processor.log.TurbineMessager - com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+ The following fields had problems:
+  - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+
+09:24:16.801 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.turbine.processor.generator.TurbineAutoServiceGenerator had 0 elements deferred at end of processing
+09:24:16.801 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpSharedInterfaceGenerator had 0 elements deferred at end of processing
+09:24:16.801 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpClientImplTypeGenerator had 0 elements deferred at end of processing
+09:24:16.801 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpServiceTypeGenerator had 0 elements deferred at end of processing
+09:24:16.801 [main] ERROR com.hubspot.turbine.processor.TurbineProcessorBase - Generator com.hubspot.chirp.gen.ChirpServerTypeGenerator had 0 elements deferred at end of processing
+09:24:16.822 [main] DEBUG com.hubspot.chirp.gen.graphql.GraphQLCoercionUtilsGenerator - [CHIRP-GRAPHQL] Generated graphql schema: type Query {
+  healthCheck: String!
+}
+
+"Char as Character"
+scalar Char @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#char")
+
+"Long type"
+scalar Long @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#long")
+
+"A JSON scalar"
+scalar JSON @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#json")
+
+"Short as Int"
+scalar Short @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#short")
+
+"Byte as Int"
+scalar Byte @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#byte")
+
+"java.math.BigInteger"
+scalar BigInteger @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#biginteger")
+
+"java.math.BigDecimal"
+scalar BigDecimal @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#bigdecimal")
+
+"output: epoch milliseconds long | input: epoch milliseconds long or ISO-8601 datetime string"
+scalar Instant @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#instant")
+
+"ISO-8601 compliant time without UTC offset"
+scalar LocalTime @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#localtime")
+
+"ISO-8601 compliant date-time without UTC offset"
+scalar LocalDateTime @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#localdatetime")
+
+"ISO-8601 compliant date without UTC offset"
+scalar LocalDate @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#localdate")
+
+"ISO-8601 compliant date-time with UTC offset"
+scalar OffsetDateTime @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#offsetdatetime")
+
+"ISO-8601 compliant time with UTC offset"
+scalar OffsetTime @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#offsettime")
+
+"ISO-8601 extended date-time with appended IANA timezone"
+scalar ZonedDateTime @specifiedBy(url : "https://product.hubteam.com/docs/chirp-graphql/pages/rfcs/ScalarTypes.html#zoneddatetime")
+
+type gaffer_rpc_models_CreateUpgradeResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  upgrade: gaffer_models_upgrade_CheckUpgrade!
+}
+
+type chirp_core_ChirpMethodCoordinates {
+  method: String!
+  service: String!
+}
+
+type gaffer_rpc_models_CreateUpgradeRequest implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String!
+  mothershipMissionId: Long!
+  prUrl: String!
+  user: String!
+}
+
+type gaffer_rpc_models_GetRolloutRequest implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String!
+}
+
+type gaffer_models_rollout_CheckRollout implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkBuiltAt: Instant!
+  checkName: String!
+  events: [gaffer_models_rollout_event_RolloutEvent!]!
+  finishedAt: Instant
+  id: Long!
+  stage: gaffer_models_rollout_RolloutStage!
+  submittedAt: Instant!
+  type: gaffer_models_rollout_RolloutType!
+  updatedAt: Instant!
+  user: String!
+}
+
+type gaffer_rpc_models_GetRolloutResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  rollout: gaffer_models_rollout_CheckRollout
+}
+
+type gaffer_rpc_models_VoidResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  _void_: Boolean
+}
+
+type gaffer_models_rollout_event_BuildEvent implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  timestamp: Instant!
+}
+
+type gaffer_rpc_models_broken_BrokenChecksRequest implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String
+  owningTeam: String
+}
+
+type gaffer_rpc_models_GafferChirpError implements ChirpError & ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseError!
+  causalChain: [chirp_core_CausalChainLink!]!
+  chirpErrorMessage: String
+  coordinates: chirp_core_ChirpMethodCoordinates
+  shouldRetry: Boolean!
+}
+
+type gaffer_rpc_models_CreateRolloutResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  rollout: gaffer_models_rollout_CheckRollout!
+}
+
+type gaffer_rpc_models_CreateRolloutRequest implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String!
+  hubSpotErrorProneBuildNumber: Int!
+  rolloutType: gaffer_models_rollout_RolloutType!
+  user: String!
+}
+
+type gaffer_models_broken_AbridgedBuildInfo implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  baseVersion: String!
+  branch: String!
+  buildName: String!
+  buildNumber: Int!
+  buildTimestamp: Instant!
+  origin: String!
+  packageName: String!
+  packageType: String!
+}
+
+type gaffer_models_upgrade_CheckUpgrade implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String!
+  finishedAt: Instant
+  id: Long!
+  mothershipMissionId: Long!
+  prNumber: Int!
+  prOrigin: String!
+  submittedAt: Instant!
+  updatedAt: Instant!
+  user: String!
+  userLastMessagedAt: Instant
+}
+
+type gaffer_models_rollout_event_StageEnteredEvent implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  previousStage: gaffer_models_rollout_RolloutStage
+  stage: gaffer_models_rollout_RolloutStage!
+  timestamp: Instant!
+}
+
+type gaffer_models_broken_BrokenCheck implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  affectedBuilds: [gaffer_models_broken_BrokenCheck_affectedBuilds_Value!]!
+  checkName: String!
+  owningTeam: String!
+}
+
+type gaffer_rpc_models_CancelRolloutRequest implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkName: String!
+}
+
+type chirp_core_CausalChainLink {
+  coordinates: chirp_core_ChirpMethodCoordinates!
+  errorClass: String!
+  errorMessage: String
+}
+
+type gaffer_rpc_models_ErrorProneJiraResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  checkNames: [String!]!
+}
+
+type gaffer_rpc_models_CancelRolloutResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  _void_: Boolean
+}
+
+type gaffer_models_rollout_event_JiraApprovalRequiredNotifyEvent implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  recipient: gaffer_models_rollout_event_NotificationRecipient!
+  timestamp: Instant!
+}
+
+type gaffer_rpc_models_broken_BrokenChecksResponse implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  brokenChecks: [gaffer_models_broken_BrokenCheck!]!
+}
+
+type gaffer_models_rollout_event_PromotionNotifyEvent implements ChirpMessage {
+  _all: JSON!
+  _case: GraphQLCaseOk!
+  recipient: gaffer_models_rollout_event_NotificationRecipient!
+  timestamp: Instant!
+}
+
+type gaffer_models_broken_BrokenCheck_affectedBuilds_Value {
+  key: gaffer_models_broken_CheckBreakageType!
+  value: [gaffer_models_broken_AbridgedBuildInfo!]!
+}
+
+input gaffer_rpc_models_CreateUpgradeResponseInput {
+  upgrade: gaffer_models_upgrade_CheckUpgradeInput!
+}
+
+input gaffer_rpc_models_CreateRolloutRequestInput {
+  checkName: String!
+  hubSpotErrorProneBuildNumber: Int!
+  rolloutType: gaffer_models_rollout_RolloutType!
+  user: String!
+}
+
+input gaffer_rpc_models_broken_BrokenChecksRequestInput {
+  checkName: String
+  owningTeam: String
+}
+
+input gaffer_rpc_models_ErrorProneJiraResponseInput {
+  checkNames: [String!]!
+}
+
+input gaffer_models_rollout_event_StageEnteredEventInput {
+  previousStage: gaffer_models_rollout_RolloutStage
+  stage: gaffer_models_rollout_RolloutStage!
+  timestamp: Instant!
+}
+
+input gaffer_rpc_models_GafferChirpErrorInput {
+  causalChain: [chirp_core_CausalChainLinkInput!]!
+  chirpErrorMessage: String
+  coordinates: chirp_core_ChirpMethodCoordinatesInput
+  shouldRetry: Boolean
+}
+
+input gaffer_models_rollout_event_RolloutEventInput @oneOf {
+  gaffer_models_rollout_event_BuildEventInput: gaffer_models_rollout_event_BuildEventInput
+  gaffer_models_rollout_event_JiraApprovalRequiredNotifyEventInput: gaffer_models_rollout_event_JiraApprovalRequiredNotifyEventInput
+  gaffer_models_rollout_event_PromotionNotifyEventInput: gaffer_models_rollout_event_PromotionNotifyEventInput
+  gaffer_models_rollout_event_StageEnteredEventInput: gaffer_models_rollout_event_StageEnteredEventInput
+}
+
+input gaffer_models_rollout_event_PromotionNotifyEventInput {
+  recipient: gaffer_models_rollout_event_NotificationRecipient!
+  timestamp: Instant!
+}
+
+input gaffer_rpc_models_broken_BrokenChecksResponseInput {
+  brokenChecks: [gaffer_models_broken_BrokenCheckInput!]!
+}
+
+input gaffer_rpc_models_CancelRolloutResponseInput {
+  _void_: Boolean
+}
+
+input gaffer_rpc_models_CancelRolloutRequestInput {
+  checkName: String!
+}
+
+input gaffer_models_rollout_CheckRolloutInput {
+  checkBuiltAt: Instant!
+  checkName: String!
+  events: [gaffer_models_rollout_event_RolloutEventInput!]!
+  finishedAt: Instant
+  id: Long!
+  stage: gaffer_models_rollout_RolloutStage!
+  submittedAt: Instant!
+  type: gaffer_models_rollout_RolloutType!
+  updatedAt: Instant!
+  user: String!
+}
+
+input gaffer_rpc_models_GetRolloutRequestInput {
+  checkName: String!
+}
+
+input gaffer_models_broken_AbridgedBuildInfoInput {
+  baseVersion: String!
+  branch: String!
+  buildName: String!
+  buildNumber: Int!
+  buildTimestamp: Instant!
+  origin: String!
+  packageName: String!
+  packageType: String!
+}
+
+input chirp_core_ChirpMethodCoordinatesInput {
+  method: String!
+  service: String!
+}
+
+input gaffer_rpc_models_CreateUpgradeRequestInput {
+  checkName: String!
+  mothershipMissionId: Long!
+  prUrl: String!
+  user: String!
+}
+
+input gaffer_models_broken_BrokenCheck_affectedBuilds_ValueInput {
+  key: gaffer_models_broken_CheckBreakageType!
+  value: [gaffer_models_broken_AbridgedBuildInfoInput!]!
+}
+
+input gaffer_models_rollout_event_JiraApprovalRequiredNotifyEventInput {
+  recipient: gaffer_models_rollout_event_NotificationRecipient!
+  timestamp: Instant!
+}
+
+input chirp_core_CausalChainLinkInput {
+  coordinates: chirp_core_ChirpMethodCoordinatesInput!
+  errorClass: String!
+  errorMessage: String
+}
+
+input gaffer_rpc_models_CreateRolloutResponseInput {
+  rollout: gaffer_models_rollout_CheckRolloutInput!
+}
+
+input gaffer_models_broken_BrokenCheckInput {
+  affectedBuilds: [gaffer_models_broken_BrokenCheck_affectedBuilds_ValueInput!]!
+  checkName: String!
+  owningTeam: String!
+}
+
+input gaffer_rpc_models_VoidResponseInput {
+  _void_: Boolean
+}
+
+input gaffer_models_upgrade_CheckUpgradeInput {
+  checkName: String!
+  finishedAt: Instant
+  id: Long!
+  mothershipMissionId: Long!
+  prNumber: Int!
+  prOrigin: String!
+  submittedAt: Instant!
+  updatedAt: Instant!
+  user: String!
+  userLastMessagedAt: Instant
+}
+
+input gaffer_models_rollout_event_BuildEventInput {
+  timestamp: Instant!
+}
+
+input gaffer_rpc_models_GetRolloutResponseInput {
+  rollout: gaffer_models_rollout_CheckRolloutInput
+}
+
+enum gaffer_models_rollout_RolloutType {
+  PROMOTE_CHECK
+  SEND_JIRAS
+}
+
+enum gaffer_models_rollout_RolloutStage {
+  AWAITING_ALLOWLIST
+  AWAITING_BUILD
+  AWAITING_JIRA_APPROVAL
+  AWAITING_PROMOTION
+  CANCELLED
+  COMPLETED
+  LEGACY_MIGRATION
+  SENDING_JIRAS
+}
+
+enum gaffer_models_broken_CheckBreakageType {
+  EXCEPTION
+  MISSING_CHECK
+}
+
+enum gaffer_models_rollout_event_NotificationRecipient {
+  TEAM
+  USER
+}
+
+union gaffer_models_rollout_event_RolloutEvent = gaffer_models_rollout_event_BuildEvent | gaffer_models_rollout_event_JiraApprovalRequiredNotifyEvent | gaffer_models_rollout_event_PromotionNotifyEvent | gaffer_models_rollout_event_StageEnteredEvent
+
+type ChirpPageInfo {
+  hasNextPage: Boolean!
+  nextOffset: String!
+}
+
+enum GraphQLCaseOkEnum {
+  OK
+}
+
+enum GraphQLCaseErrorEnum {
+  ERROR
+}
+
+type GraphQLCaseOk {
+  value: GraphQLCaseOkEnum!
+}
+
+type GraphQLCaseError {
+  value: GraphQLCaseErrorEnum!
+}
+
+union GraphQLCase = GraphQLCaseError | GraphQLCaseOk
+
+interface ChirpError implements ChirpMessage {
+  _case: GraphQLCaseError!
+  chirpErrorMessage: String
+}
+
+interface ChirpMessage {
+  _case: GraphQLCase!
+}
+
+"Indicates an Input Object is a OneOf Input Object."
+directive @oneOf on INPUT_OBJECT
+
+
+09:24:16.822 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [CHIRP-GRAPHQL]: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.822 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+09:24:16.824 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [TURBINE] wrote auto-discovery file with 8 services for type com.google.inject.Module
+09:24:16.825 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [TURBINE] wrote auto-discovery file with 13 services for type com.hubspot.chirp.core.avro.ImmutableAvroCodec
+09:24:16.825 [main] INFO com.hubspot.turbine.processor.log.TurbineMessager - [TURBINE] wrote auto-discovery file with 4 services for type com.hubspot.chirp.runtime.core.graphql.ChirpGraphQLRegistryModule
+09:24:16.825 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Post processing actions are complete
+09:24:16.825 [main] INFO com.hubspot.turbine.processor.TurbineProcessorBase - Round took 27634uS
+Note: [CHIRP] Attempting codegen for message: com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF
+Note: [CHIRP] Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+error: com.hubspot.turbine.processor.exception.DeferProcessingException: Failed to validate ChirpMessage for com.hubspot.gaffer.rpc.models.ErrorProneConfigurationResponseIF.
+   The following fields had problems:
+    - epOptions: All immutables used in CHIRP messages must be generated as ChirpMessages (e.g. have @ChirpMessage), but com.hubspot.error.prone.core.internal.AbstractEpOptions was not
+Note: [CHIRP-GRAPHQL]: we're not in Blazar, so we're not writing out viewable build artifacts
+Note: CHIRP: we're not in Blazar, so we're not writing out viewable build artifacts
+Note: [TURBINE] wrote auto-discovery file with 8 services for type com.google.inject.Module
+Note: [TURBINE] wrote auto-discovery file with 13 services for type com.hubspot.chirp.core.avro.ImmutableAvroCodec
+Note: [TURBINE] wrote auto-discovery file with 4 services for type com.hubspot.chirp.runtime.core.graphql.ChirpGraphQLRegistryModule
+1 error
+
