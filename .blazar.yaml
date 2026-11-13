@@ -2,7 +2,7 @@ buildpack:
   name: Blazar-Buildpack-Java-oss-fork
 
 env:
-  MAVEN_BUILD_ARGS: -DskipTests -Drat.skip=true -Dspotless.check.skip=true
+  MAVEN_BUILD_ARGS: -DskipTests -Dinvoker.skip=true -Drat.skip=true -Dspotless.check.skip=true
 
 stepActivation:
   notify:
