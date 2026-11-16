@@ -2,6 +2,7 @@ buildpack:
   name: Blazar-Buildpack-Java-oss-fork
 
 env:
+  SKIP_VERSION_OVERRIDE_ON_BRANCH: hubspot
   MAVEN_BUILD_ARGS: -DskipTests -Dinvoker.skip=true -Drat.skip=true -Dspotless.check.skip=true
 
 stepActivation:
