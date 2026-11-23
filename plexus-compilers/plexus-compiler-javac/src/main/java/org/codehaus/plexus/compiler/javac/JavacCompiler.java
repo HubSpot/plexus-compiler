@@ -204,19 +204,28 @@ public class JavacCompiler extends AbstractCompiler {
         String[] args = buildCompilerArguments(config, sourceFiles, javacVersion);
 
         CompilerResult result;
+        long startNanos = System.nanoTime();
 
-        if (config.isFork()) {
+        try {
+            if (config.isFork()) {
 
-            result = compileOutOfProcess(config, executable, args);
-        } else {
-            if (hasJavaxToolProvider() && !config.isForceJavacCompilerUse()) {
-                // use fqcn to prevent loading of the class on 1.5 environment !
-                result = inProcessCompiler().compileInProcess(args, config, sourceFiles);
+                result = compileOutOfProcess(config, executable, args);
             } else {
-                result = compileInProcess(args, config);
+                if (hasJavaxToolProvider() && !config.isForceJavacCompilerUse()) {
+                    // use fqcn to prevent loading of the class on 1.5 environment !
+                    result = inProcessCompiler().compileInProcess(args, config, sourceFiles);
+                } else {
+                    result = compileInProcess(args, config);
+                }
             }
+        } catch (CompilerException | RuntimeException e) {
+            JavacLedger.record(
+                    System.getenv(), config, args, sourceFiles, executable, startNanos, null, e, getLog()::warn);
+            throw e;
         }
 
+        JavacLedger.record(
+                System.getenv(), config, args, sourceFiles, executable, startNanos, result, null, getLog()::warn);
         return result;
     }
 
